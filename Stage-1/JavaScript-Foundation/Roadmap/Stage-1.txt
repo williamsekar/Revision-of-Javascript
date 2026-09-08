@@ -1,0 +1,53 @@
+Stage 1 — Web Fundamentals
+
+HTML document structure
+├── Tags
+├── Elements
+├── Attributes
+├── Headings
+├── Paragraphs
+├── Links
+├── Images
+├── Lists
+├── Tables
+├── Forms
+├── Input types
+├── Semantic HTML
+├── Audio / Video
+└── Accessibility
+
+CSS
+CSS
+├── Selectors
+├── Box Model
+├── Display
+├── Position
+├── Units
+├── Colors
+├── Fonts
+├── Flexbox
+├── Grid
+├── Responsive Design
+├── Media Queries
+├── Transitions
+├── Animations
+└── CSS Variables
+
+Mini Projects
+
+Personal profile
+Landing page
+Login page
+Responsive portfolio
+Product card
+Pricing page
+Dashboard UI
+
+Questions
+
+What is semantic HTML?
+Difference between div and section?
+What is the CSS box model?
+Flexbox vs Grid?
+What is responsive design?
+relative vs absolute vs fixed?

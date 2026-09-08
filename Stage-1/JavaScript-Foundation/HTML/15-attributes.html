@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attributes</title>
+  </head>
+  <body>
+    <h1>Hello world</h1>
+    <input type="text" name="username" id="username" />
+    <span id="small-text">Small text</span>
+  </body>
+  <script>
+    let heading = document
+      .querySelector("h1")
+      .setAttribute("id", "main-heading");
+    let username = document.querySelector("#username");
+    console.log(username.getAttribute("name"));
+    console.log(username.hasAttribute("id"));
+    document.getElementById("small-text").removeAttribute("id");
+  </script>
+</html>

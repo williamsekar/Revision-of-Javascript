@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+  </head>
+  <body>
+    <!--id-->
+    <h1 id="course-name">Javascript Course</h1>
+    <!--class-->
+    <li class="level">Basic</li>
+    <li class="level">Advanced</li>
+    <li class="level">Master</li>
+    <input type="radio" name="gender" id="male" value="male" />Male
+    <input type="radio" name="gender" id="female" value="female" />Female
+  </body>
+  <script>
+    <!--query selector-->
+    let s1 = document.querySelector("#course-name");
+    let s2 = document.querySelector(".level");
+    let s3 = document.querySelector("li");
+    <!--query selector all-->
+    let s4 = document.querySelectorAll("li");
+
+    let s5 = document.getElementById("course-name");
+    let s6 = document.getElementsByClassName("level");
+    let s7 = document.getElementsByTagName("li");
+    let s8 = document.getElementsByName("gender");
+    let circle = document.getElementsByTagNameNS("http://w3.org", "circle");
+    if (circle.length > 0) {
+      circle[o].setAttribute("fill", "red");
+    }
+  </script>
+</html>
