@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes Advanced</title>
+    <style>
+      .text {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <button id="btn1">Red</button>
+    <button id="btn2">Clear</button>
+    <button id="btn3">Toggle</button>
+  </body>
+  <script>
+    btn1 = document.querySelector("#btn1");
+    btn2 = document.querySelector("#btn2");
+    btn3 = document.querySelector("#btn3");
+    heading = document.querySelector("h1");
+    btn1.addEventListener("click", () => heading.classList.add("text"));
+    btn2.addEventListener("click", () => heading.classList.remove("text"));
+    btn3.addEventListener("click", () => {
+      heading.classList.toggle("text");
+      console.log(heading.classList.contains("text"));
+    });
+  </script>
+</html>

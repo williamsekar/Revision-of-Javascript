@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events</title>
+</head>
+
+<body>
+
+  <!--
+        click
+        dblclick
+        mouseover
+        mouseout
+        mouseenter
+        mouseleave
+    -->
+  <button id="btn1">Click</button>
+  <button id="btn2">Double Click</button>
+  <p id="btn3">Mouse Enter</p>
+  <p id="btn4">Mouse Over</p>
+  <p id="btn5">Mouse Leave</p>
+  <div style="background-color: red; padding: 5px">
+    <p id="btn6">Mouse Out</p>
+  </div>
+  <!--
+        keydown
+        keyup
+        input
+        change
+        focus
+        blur
+        submit
+
+        DOMContentLoaded
+        Load
+    -->
+  <form action="" id="form">
+    <input type="text" name="message" id="message" />
+    <h3>Press Down:</h3>
+    <p id="pressDown"></p>
+    <h3>Press Up:</h3>
+    <p id="pressUp"></p>
+    <h3>Press Input:</h3>
+    <p id="pressInput"></p>
+    <h3>Press Change:</h3>
+    <p id="pressChange"></p>
+    <h3 id="notification">blur:</h3>
+    <input type="submit" value="sumbit">
+  </form>
+
+  <script>
+
+    <!--Html page, parse the file, create dom, domcontenetloading,load,load the resources -->
+    document.addEventListener("DOMContentLoaded", () => console.log("DOM ready!"))
+    document.addEventListener("load", () => console.log("Load"))
+    let form = document.querySelector("form")
+    let message = document.getElementById("message")
+    let pressDown = document.getElementById("pressDown")
+    let pressUp = document.getElementById("pressUp")
+    let pressInput = document.getElementById("pressInput")
+    let pressChange = document.getElementById("pressChange")
+    let notification = document.getElementById("notification")
+
+    form.addEventListener("submit", (event) => event.preventDefault())
+    message.addEventListener("keypress", (event) => pressDown.textContent = event.key)
+    message.addEventListener("keydown", (event) => pressUp.textContent = event.key)
+    message.addEventListener("input", (event) => pressInput.textContent = message.value)
+    message.addEventListener("change", (event) => pressChange.textContent = message.value)
+    message.addEventListener("focus", () => message.style.backgroundColor = "lightyellow")
+    message.addEventListener("blur", function () {
+      if (message.value === "") {
+        notification.textContent = "Username required!"
+      }
+      else {
+        notification.textContent = "Username looks good"
+      }
+    })
+
+    btn1 = document.getElementById("btn1");
+    btn2 = document.getElementById("btn2");
+    btn3 = document.getElementById("btn3");
+    btn4 = document.getElementById("btn4");
+    btn5 = document.getElementById("btn5");
+    btn6 = document.getElementById("btn6");
+
+    btn1.addEventListener("click", () => console.log("Clicked"));
+    btn2.addEventListener("dblclick", () => console.log("Double Clicked"));
+    btn3.addEventListener("mouseenter", () => console.log("Mouse Enter"));
+    btn4.addEventListener("mouseover", () => console.log("Mouse Over"));
+    btn5.addEventListener("mouseleave", () => console.log("Mouse Leave"));
+    btn6.addEventListener("mouseleave", () => console.log("Mouse Out"));
+  </script>
+
+</html>
