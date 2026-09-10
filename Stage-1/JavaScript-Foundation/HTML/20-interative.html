@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive</title>
+</head>
+
+<body>
+    <details>
+        <summary>
+            <span>What is HTML?</span>
+        </summary>
+        <div>
+            <p>Hypertext markup markup language</p>
+        </div>
+    </details>
+    <details id="test1" open>
+        <summary>
+            <span>What is javascript?</span>
+        </summary>
+        <div>
+            <p>Dynamic programming language</p>
+        </div>
+    </details>
+
+    <button id="openBtn">Open</button>
+    <dialog id="dialog">
+        <h1>Welcome</h1>
+        <p>Hello world</p>
+        <button id="closeBtn">Close</button>
+    </dialog>
+
+    <button id="delBtn">Delete account?</button>
+    <dialog id="modal">
+        <h1>Are you sure?</h1>
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </dialog>
+</body>
+<script>
+
+    let delBtn = document.getElementById("delBtn")
+    let modal = document.getElementById("modal")
+    let yesBtn = document.getElementById("yesBtn")
+    let noBtn = document.getElementById("noBtn")
+
+    delBtn.addEventListener("click", () => modal.showModal())
+    noBtn.addEventListener("click", () => modal.close('No'))
+    yesBtn.addEventListener("click", () => modal.close('Yes'))
+    modal.addEventListener("close", () => {
+        if (modal.returnValue === 'Yes') {
+            console.log("Account deleted successfully!")
+        } else {
+            console.log("User revoke!")
+        }
+    })
+
+    let openBtn = document.getElementById("openBtn")
+    let closeBtn = document.getElementById("closeBtn")
+    let dialog = document.getElementById("dialog")
+
+    openBtn.addEventListener("click", () => dialog.show())
+    closeBtn.addEventListener("click", () => dialog.close())
+
+    let test1 = document.getElementById("test1")
+    test1.addEventListener("toggle", () => {
+        if (test1.open) {
+            console.log("details is opened")
+        } else {
+            console.log("details is not open")
+        }
+    })
+</script>
+
+</html>
