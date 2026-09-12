@@ -1,0 +1,24 @@
+/* named color */
+#test-1{
+    color: red;
+}
+
+/* color code */
+#test-2{
+    color: rgb(197, 197, 17);
+}
+
+/* RGB */
+#test-3{
+    color: rgb(10,200,100);
+}
+
+/* RGBA */
+#test-4{
+    color: rgba(150,50,200,0.9);
+}
+
+/* HSL */
+#test-5{
+    color: hsl(22,50%,50%);
+}

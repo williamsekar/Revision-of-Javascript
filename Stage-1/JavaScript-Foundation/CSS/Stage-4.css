@@ -1,0 +1,58 @@
+:root{
+    font-size: 25px;
+}
+.test-1{
+    width: 500px;
+}
+
+.test-1 > p{
+    width: 50%;
+    background-color: red;
+}
+
+.test-2{
+    font-size: 20px;
+}
+
+.test-2 > p{
+    font-size: 2em;
+}
+
+.test-3{
+    font-size: 23px;
+}
+
+.test-3 p{
+    font-size: 2rem;
+}
+
+.test-4{
+    width: 50vw;
+    background-color: tan;
+}
+
+.test-5
+{
+    height:10vh;
+    background-color: steelblue;
+}
+
+.test-6{
+    width: 50vmin;
+    background-color: green;
+}
+
+.test-7{
+    width: 50vmax;
+    background-color: purple;
+}
+
+.test-8{
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 400px;
+    max-height: 1000px;
+    background-color: orange;
+}
+
+/* svh,lvh,dvh and svw,lvw,dvw - small,long and dynamic */
