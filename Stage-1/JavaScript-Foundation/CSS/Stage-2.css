@@ -1,0 +1,130 @@
+/* Universal selector */
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Element selector */
+p{
+    color: red;
+}
+
+/* Class selector */
+.blue{
+    color: blue;
+}
+
+/* Id selector */
+#orange{
+    color: orange;
+}
+
+/* Grouping selector */
+h1,h2,h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hulk{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+/* Descendent selector */
+.card p{
+    color:brown;
+    background-color: yellow;
+}
+
+/* Child selector */
+.family > h3{
+    color: blue;
+}
+
+/* Attributes selector */
+input[name="password"]
+{
+    background-color: rgb(250, 255, 179);
+}
+
+/* Psedudo classes */
+#hover:hover
+{
+    font-size: larger;
+}
+
+input[name="username"]:focus{
+    outline: 2px solid rgb(0, 13, 255);
+}
+#active:active{
+    background-color: red;
+}
+
+a:active{
+    background-color: green;
+}
+
+a:visited{
+    color: red;
+}
+
+a:hover{
+    color: orange;
+}
+
+.tree > li:first-child{
+    background-color: red;
+}
+
+.tree > li:last-child{
+    background-color: green;
+}
+/* odd,even,2n,3n,n+4,-4+n */
+.items > li:nth-child(-n+5){
+    background-color: slateblue;
+}
+
+/* disabled, enabled */
+.btn:enabled{
+    color: rgb(0, 255, 64);
+}
+
+.btn:disabled{
+    color: red;
+}
+
+#test-1 p:not(.rough){
+    color: gray;
+}
+
+#test-2:is(p,h1){
+    color: green;
+}
+#test-2:where(p,h1){
+    color: rgb(21, 0, 128);
+}
+
+/* Pseudo classes */
+
+#test-3 > p::first-letter{
+    font-size: large;
+    font-weight: bold;
+}
+
+#test-3 > p::first-line{
+  background-color: green;
+}
+
+#test-3 > p::before{
+    content: "****";
+}
+
+#test-3 > p::after{
+    content: "&&&&";
+}
+
+#test-3 > p::selection{
+    background-color: orange;
+}
+
+#area::placeholder{
+    color: red;
+    background-color: orange;
+}
