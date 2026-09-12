@@ -1,0 +1,31 @@
+.test-1{
+    box-sizing: content-box;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+}
+
+.test-2{
+    box-sizing: border-box;
+    border: 2px solid black;
+     padding: 5px;
+    margin: 5px;
+     width: 200px;
+}
+
+.border-1 > p:nth-child(1){
+    border-width: 3px;
+    border-style: dotted;
+    border-color: red;
+}
+.border-1 > p:nth-child(2){
+    border-top:3px dashed green;
+    border-bottom: 2px groove orange;
+    border-right: 4px inset purple;
+    border-left: 5px outset yellow;
+}
+.border-1 > p:nth-child(3){
+    border: 2px solid black;
+   border-radius: 5px;
+}
